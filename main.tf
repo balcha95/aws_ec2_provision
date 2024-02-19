@@ -1,17 +1,15 @@
 terraform {
   required_providers {
     aws = {
-      source  = "hashicorp/aws"
-      version = "~> 4.16"
+      source = "hashicorp/aws"
+      version = "5.34.0"
     }
   }
-
-  required_version = ">= 1.2.0"
 }
 
+# AWS Provider (aws) with region set to 'us-east-1'
 provider "aws" {
-  region  = "us-west-2"
-  profile = "jack.roper"
+  region = "us-east-1"
 }
 
 resource "aws_instance" "example_server" {
